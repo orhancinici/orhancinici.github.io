@@ -1,37 +1,7 @@
 [
     {
-        "title": "İlk Blog Yazım",
-        "date": "12-10-2024",
-        "filename": "ilk-blog-yazim.md"
-    },
-    {
-        "title": "Blog Yazım 1",
-        "date": "13-10-2022",
+        "title": "Deneme",
+        "date": "12-04-2025",
         "filename": "blog-giris.md"
-    },
-    {
-        "title": "Web Tasarımının Temelleri",
-        "date": "05-11-2023",
-        "filename": "web-tasarim-temelleri.md"
-    },
-    {
-        "title": "CSS Flexbox Kullanımı",
-        "date": "22-03-2023",
-        "filename": "css-flexbox-kullanimi.md"
-    },
-    {
-        "title": "JavaScript'te Promise Yapısı",
-        "date": "14-06-2024",
-        "filename": "javascript-promise.md"
-    },
-    {
-        "title": "React Hooks Nedir?",
-        "date": "28-09-2023",
-        "filename": "react-hooks-nedir.md"
-    },
-    {
-        "title": "WordPress Tema Geliştirme",
-        "date": "03-05-2024",
-        "filename": "wordpress-tema-gelistirme.md"
     }
 ]
