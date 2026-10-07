@@ -1,118 +1,115 @@
 <!DOCTYPE html>
-<html lang="tr" class="scroll-smooth">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yazılarım - Kişisel Web Sayfası</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Yazılar · Orhan Çinici</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231f3a5f' stroke='%23b07d22' stroke-width='3'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='600' fill='%23fff' text-anchor='middle'%3EOÇ%3C/text%3E%3C/svg%3E">
+    <script>document.documentElement.classList.add('js'); try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
-
-<body class="transition-colors duration-300">
-    <!-- Navigation -->
-    <header class="fixed w-full z-50 transition-colors duration-300">
-        <nav class="bg-white border-gray-200 px-4 md:px-6 py-2.5 shadow-md">
-            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                <a href="index.html" class="flex items-center">
-                    <span class="self-center text-xl font-semibold whitespace-nowrap text-primary-color" style="color: var(--primary-color);"><i class="fa-solid fa-person-walking"></i></span>
-                </a>
-                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
-                    <span class="sr-only">Menüyü aç</span>
-                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+<body>
+    <!-- Üst menü -->
+    <header class="site-header">
+        <nav class="container nav" aria-label="Ana menü">
+            <a href="index.html" class="brand">
+                <span class="brand-mark">OÇ</span>
+                <span>Orhan Çinici</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#about">Hakkımda</a></li>
+                <li><a href="index.html#research">Araştırmalar</a></li>
+                <li><a href="index.html#publications">Yayınlar</a></li>
+                <li><a href="index.html#projects">Projeler</a></li>
+                <li><a href="writings.html" class="active">Yazılar</a></li>
+                <li><a href="index.html#contact">İletişim</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button type="button" class="icon-btn theme-toggle" aria-label="Açık/koyu tema">
+                    <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
                 </button>
-                <div class="hidden w-full md:block md:w-auto md:mx-auto" id="navbar-default">
-                    <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
-                        <li>
-                            <a href="index.html" class="nav-link block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-color md:p-0" style="--hover-color: var(--primary-color);">Ana Sayfa</a>
-                        </li>
-                        <li>
-                            <a href="index.html#about" class="nav-link block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-color md:p-0">Hakkımda</a>
-                        </li>
-                        <li>
-                            <a href="index.html#projects" class="nav-link block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-color md:p-0">Projeler</a>
-                        </li>
-                        <li>
-                            <a href="writings.html" class="nav-link block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-color md:p-0">Yazılarım</a>
-                        </li>
-                        <li>
-                            <a href="index.html#contact" class="nav-link block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-color md:p-0">İletişim</a>
-                        </li>
-                    </ul>
-                </div>
+                <button type="button" class="icon-btn menu-toggle" aria-label="Menüyü aç" aria-controls="nav-links" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="pt-20 min-h-screen">
-        <div class="container max-w-screen-lg mx-auto px-4">
-            <h1 class="text-3xl font-bold mb-8 text-center">Yazılarım</h1>
-            
-            <!-- Yazı Listesi -->
-            <div class="bg-white rounded-lg shadow-lg">
-                <ul class="post-list divide-y divide-gray-200" id="postList">
-                    <!-- Yazılar JavaScript ile buraya eklenecek -->
-                    <li class="p-4 text-center text-gray-500">
-                        Yazılar yükleniyor...
-                    </li>
-                </ul>
+    <main class="page-main">
+        <div class="container page-narrow">
+            <div class="page-head">
+                <span class="eyebrow">Yazılar</span>
+                <h1 class="section-title">Notlar ve yazılar</h1>
             </div>
+            <ul class="post-list" id="postList">
+                <li class="post-empty">Yazılar yükleniyor…</li>
+            </ul>
         </div>
     </main>
 
-    <!-- Flowbite JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <footer class="site-footer">
+        <div class="container">
+            <span>© <span id="current-year"></span> Orhan Çinici</span>
+            <span>Kırşehir Ahi Evran Üniversitesi · İlahiyat Fakültesi</span>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
     <script>
-        // Markdown dosyalarını listele
+        // "GG-AA-YYYY" biçimindeki tarihi Date nesnesine çevir
+        function parseDate(s) {
+            const [d, m, y] = s.split('-').map(Number);
+            return new Date(y, m - 1, d);
+        }
+
+        function formatDate(s) {
+            return parseDate(s).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
         async function loadPosts() {
+            const postList = document.getElementById('postList');
             try {
                 const response = await fetch('./yazilar/posts.json');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const posts = await response.json();
-                
-                const postList = document.getElementById('postList');
-                postList.innerHTML = '';
-                
+
                 // Yazıları tarihe göre sırala (en yeni en üstte)
-                posts.sort((a, b) => new Date(b.date.split('-').reverse()) - new Date(a.date.split('-').reverse()));
-                
+                posts.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+                postList.innerHTML = '';
+                if (!posts.length) {
+                    postList.innerHTML = '<li class="post-empty">Henüz yazı yok.</li>';
+                    return;
+                }
+
                 posts.forEach(post => {
                     const li = document.createElement('li');
-                    li.className = 'post-item cursor-pointer';
-                    li.innerHTML = `
-                        <a href="post.html?post=${post.filename}" class="block">
-                            <h2 class="text-xl font-semibold text-gray-900 hover:text-primary-color">
-                                ${post.title}
-                            </h2>
-                            <div class="flex items-center space-x-2 mt-2">
-                                <span class="post-date">${post.date}</span>
-                                <span class="text-gray-400">•</span>
-                                <span class="text-primary-color hover:text-primary-dark">Devamını Oku →</span>
-                            </div>
-                        </a>
-                    `;
+                    li.className = 'post-item';
+                    const a = document.createElement('a');
+                    a.className = 'card';
+                    a.href = `post.html?post=${encodeURIComponent(post.filename)}`;
+                    const h2 = document.createElement('h2');
+                    h2.textContent = post.title;
+                    const date = document.createElement('span');
+                    date.className = 'post-date';
+                    date.textContent = formatDate(post.date);
+                    a.append(h2, date);
+                    li.appendChild(a);
                     postList.appendChild(li);
                 });
             } catch (error) {
                 console.error('Yazılar yüklenirken hata oluştu:', error);
-                document.getElementById('postList').innerHTML = `
-                    <li class="p-4 text-center">
-                        <div class="text-red-500">Yazılar yüklenirken bir hata oluştu: ${error.message}</div>
-                    </li>
-                `;
+                postList.innerHTML = '<li class="post-empty error-text">Yazılar yüklenirken bir hata oluştu.</li>';
             }
         }
 
-        // Sayfa yüklendiğinde
-        document.addEventListener('DOMContentLoaded', function() {
-            // Yazıları yükle
-            loadPosts();
-        });
+        document.addEventListener('DOMContentLoaded', loadPosts);
     </script>
 </body>
-</html> 
+</html>
