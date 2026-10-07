@@ -339,14 +339,12 @@ section.alt { background: var(--surface-2); }
 .medallion .m-star { fill: none; stroke: var(--accent); stroke-width: 1.2; }
 .medallion .m-star-soft { fill: none; stroke: var(--accent); stroke-width: .8; opacity: .45; }
 .medallion .m-ring { fill: none; stroke: var(--accent); stroke-width: 1; opacity: .6; }
-.medallion .m-disc { fill: var(--primary); }
-.medallion .m-text {
-    fill: var(--primary-contrast);
-    font-family: var(--font-serif);
-    font-size: 64px;
-    font-weight: 600;
-    letter-spacing: 1px;
+.medallion .m-disc { fill: #1f3a5f; }
+:root[data-theme="dark"] .medallion .m-disc { fill: var(--surface-2); }
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .medallion .m-disc { fill: var(--surface-2); }
 }
+.medallion .m-motif-fill { fill: #d4a54a; }
 .medallion .m-rotate { transform-origin: 200px 200px; animation: spin 120s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .medallion .m-rotate { animation: none; } }
@@ -401,7 +399,8 @@ section.alt { background: var(--surface-2); }
     gap: 48px;
     align-items: start;
 }
-.about-text p { font-size: 1.08rem; margin-bottom: 28px; }
+.about-text p { font-size: 1.08rem; margin-bottom: 16px; }
+.about-text p:last-of-type { margin-bottom: 28px; }
 
 .facts {
     display: grid;
