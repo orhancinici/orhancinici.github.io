@@ -298,7 +298,6 @@ section.alt { background: var(--surface-2); }
     color: var(--muted);
     margin-bottom: 20px;
 }
-.hero-text { max-width: 560px; color: var(--muted); font-size: 1.05rem; }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 32px 0 28px; }
 
